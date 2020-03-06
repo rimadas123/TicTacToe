@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 
 #declare array
 declare -a matrix=( 1 2 3 4 5 6 7 8 9 )
@@ -26,10 +26,12 @@ echo "Computer letter is $Computer"
 #checks who win the toss
 tossRandom=$(( RANDOM%2 ))
 
-if (( $tossRandom -eq 1 ))
+if [[ $tossRandom -eq 1 ]]
 then
 	echo Player will play first
 else
 	echo Computer will play first
 fi
 
+#displaying the board so the player or computer can choose valid cells
+displayBoard
